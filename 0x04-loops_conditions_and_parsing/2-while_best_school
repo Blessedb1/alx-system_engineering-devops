@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # a script that prints Best School 10 times
 t=1
-while [$t -le 10 ]
+while [ $t -le 10 ]
 do
 	echo "Best School"
 	((t++))
