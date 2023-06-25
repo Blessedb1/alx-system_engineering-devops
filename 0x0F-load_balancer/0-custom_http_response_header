@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # setting up custom headers
 
-new_string=" server_name_;\n\tadd_header X-Served-By \$hostname\n"
+new_string="server_name_;\n\tadd_header X-Served-By \$hostname;\n"
 
 sudo sed -i "server_name_;/$new_string/"  /etc/nginx/sites-enabled/default
 
-
-sudo nginx -t
 
 sudo service nginx reload
