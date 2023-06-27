@@ -7,7 +7,7 @@ sudo apt-get -y install nginx
 
 sudo chmod -R 755 /var/www
 
-sed -i "50i\\\tadd_header X-Served-By $hostname;" /etc/nginx/sites-enabled/default
+sed -i "48i\\\tadd_header X-Served-By $hostname;" /etc/nginx/sites-enabled/default
 
 echo "Hello World!" | tee /var/www/html/index.html
 
