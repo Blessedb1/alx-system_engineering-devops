@@ -3,17 +3,15 @@
 # custom header (on web-01 and web-02)
 
 sudo apt-get update
-
 sudo apt-get -y install nginx
 
 sudo chmod -R 755 /var/www
 
+sed -i "50i\\\tadd_header X-Served-By $hostname;" /etc/nginx/sites-enabled/default
+
 echo "Hello World!" | tee /var/www/html/index.html
 
 echo "Ceci n'est pas une page" > /var/www/html/404.html
-
-
-sed -i "50i\\\tadd_header X-Served-By $hostname;" /etc/nginx/sites-enabled/default
 
 sudo nginx -t
 
