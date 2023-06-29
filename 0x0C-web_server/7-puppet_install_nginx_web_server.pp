@@ -7,7 +7,7 @@ package { 'nginx':
 file_line { 'install':
   ensure => 'present',
   path   => '/etc/nginx/sites-enabled/default',
-  after  => 'location /{;',
+  after  => 'location /;',
   line   => 'rewrite ^/redirect_me https://www.github.com/besthor permanent;',
 }
 
