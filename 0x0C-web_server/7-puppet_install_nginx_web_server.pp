@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-## Install Nginx with puppet
+# automating my work using Puppet
+
 package { 'nginx':
   ensure => installed,
 }
