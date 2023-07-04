@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-## COnfigure HAProxy
+# COnfigure HAProxy
 
 sudo apt-get update
 sudo apt-get install haproxy -y
